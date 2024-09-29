@@ -6,14 +6,21 @@ import Button from '@/components/Button';
 const Home = () => {
   const router = useRouter();
 
-  const handleButtonClick = () => {
+  const attendancePage = () => {
     router.push('/attendance');  // /attendance に遷移
+  };
+  const newRegisterPage = () => {
+    router.push('/register');
   };
 
   return (
     <div>
       <h1>ホームページ</h1>
-      <Button onClick={handleButtonClick}>出席ページへ</Button>
+      <div>
+        <Button onClick={attendancePage}>出席ページへ</Button>
+        <Button onClick={newRegisterPage}>新規登録ページへ</Button>
+      </div>
+      
     </div>
   );
 };
